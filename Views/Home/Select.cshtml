@@ -1,0 +1,45 @@
+﻿@model MvcTodoList1.Models.TodoModel
+
+@{
+    ViewBag.Title = "Select";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<h2>Select<i class="fa-solid fa-circle-check"></i></h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dtmDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dtmDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tTim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tTim)
+        </dd>
+
+    </dl>
+
+</div>
+<p>
+    |
+    @Html.ActionLink("Back to List", "Index")
+</p>

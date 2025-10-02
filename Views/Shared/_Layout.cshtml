@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div style="width:1690px; height:600px">
+        <div class="row">
+            <div style="background-color:darkblue;text-align:center;color:orange;padding:2px;height:100px">
+                
+                <h1><i class="fa-solid fa-list-ol"></i>**TODO LIST**</h1>
+                <marquee><h4 style="color:red">Asp.netc# MVC| Bootstrap<i class="fa-brands fa-bootstrap" style="color: #e51010;"></i>| jQuery<i class="fa-brands fa-js" style="color: #e4111c;"></i>| SQL<i class="fa-solid fa-database" style="color: #e8111c;"></i></h4></marquee>
+            </div>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+            
+                <div class="container">
+
+                    @Html.ActionLink("सभी सूची", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                         </button>
+                     <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                             <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })></li>
+                            <li>@Html.ActionLink("Create", "Create", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="row">
+            <div style="width:427px; height: 580px; float: left; border:1px solid black;background-color:lightskyblue">
+                <h1>Activity<i class="fa-solid fa-chart-column"></i></h1>
+                <hr />
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div style="height:350px" class="carousel-item active">
+                            <img src="~/img1.jpg" class="d-block w-100 h-150" alt="1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/img2.jpg" class="d-block w-100 h-150" alt="2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/img3.jpg" class="d-block w-100 h-150" alt="3">
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="container body-content" style="width:1285px; height:565px;border:1px solid black; background-color:lightskyblue; float:right">
+
+                @RenderBody()
+            </div>
+            <div style="width: 2390px; height: 40px; background-color: darkblue; text-align: center; color: orange">
+                <footer>
+                    <p>&copy; @DateTime.Now.Year -Jaydip Mukherjee</p>
+                </footer>
+            </div>
+
+        </div>
+
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
